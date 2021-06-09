@@ -34,6 +34,10 @@ def to_usd(my_price):
     """
     return f"${my_price:,.2f}" #> $12,000.71
 
+import datetime
+
+e = datetime.datetime.now()
+
 # 1. Capture and validate user selections
 total_price = 0
 selected_ids = []
@@ -58,6 +62,10 @@ while True:
 print("-----------------------")
 print("DAT ORGANIC GROCERY")
 print("WWW.DATORGANIC.COM")
+print("-----------------------")
+
+print ("Checkout time at:", e.strftime("%d/%m/%Y"), e.strftime("%I:%M:%S %p"))
+
 print("-----------------------")
 print("Selected Products:")
 
