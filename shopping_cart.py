@@ -35,15 +35,17 @@ def to_usd(my_price):
     return f"${my_price:,.2f}" #> $12,000.71
 
 # Capture and validate user selections
-
-selected_id = input("Please input a product identifier:") #> string
+while True:
+    selected_id = input("Please input a product identifier:") #> string
+    if selected_id == "DONE":
+        break
+    else:
 #print(selected_id)
 #print(type(selected_id))
+        matching_products = [p for p in products if p["id"] == float(selected_id)]
+        matching_product = matching_products[0]
 
-matching_products = [p for p in products if p["id"] == float(selected_id)]
-matching_product = matching_products[0]
-
-print("Selected Product:", matching_product["name"],"",str(matching_product["price"]))
+        print("Selected Product:", matching_product["name"],"",str(matching_product["price"]))
 
 #print(matching_product)
 #print(type(matching_product))
