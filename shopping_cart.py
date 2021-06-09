@@ -68,12 +68,18 @@ for selected_id in selected_ids:
     matching_product = matching_products[0]
     total_price = total_price + matching_product["price"]
     for p in matching_products:
-        print(p["name"],"", to_usd(float(p["price"])))
+        print("...", p["name"],"", to_usd(float(p["price"])))
 
-
-
-
+print("-----------------------")
 
 
 print("Subtotal:", to_usd(float(total_price)))
-#print(products)
+
+tax = total_price * 0.0875
+print("Tax:", to_usd(tax))
+total = total_price + tax
+print("Total:", to_usd(total))
+
+print("-----------------------")
+print("THANK YOU! SEE YOU AGAIN SOON!")
+print("-----------------------")
