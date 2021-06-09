@@ -34,5 +34,13 @@ def to_usd(my_price):
     """
     return f"${my_price:,.2f}" #> $12,000.71
 
-print(products)
+# Capture and validate user selections
+
+selected_id = input("Please input a product identifier:")
+print(selected_id)
+print(type(selected_id))
+
+# Info Display 
+
+#print(products)
 
