@@ -41,11 +41,17 @@ e = datetime.datetime.now()
 # 1. Capture and validate user selections
 total_price = 0
 selected_ids = []
+valid_ids = []
+
+for p in products:
+    valid_ids.append(p["id"])
 
 while True:
     selected_id = input("Please input a product identifier or DONE when you are done:") #> string
     if selected_id == "DONE":
         break
+    elif float(selected_id) not in valid_ids: 
+        print("Invalid input. Please try again.")
     else:
         selected_ids.append(selected_id)
 #print(selected_id)
